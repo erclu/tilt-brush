@@ -46,13 +46,13 @@ public class App : MonoBehaviour {
   // build, you need to call is something other that 'Tilt Brush', as that if a Google trademark -
   // see the BRANDING file for details.
   // As a minimum, you should change kAppDisplayName.
-  
+
   // This is the name of the app, as displayed to the users running it.
-  public const string kAppDisplayName = "Open Source Tilt Brush";
+  public const string kAppDisplayName = "tntb";
   // The vendor name - used for naming android builds - shouldn't have spaces.
-  public const string kVendorName = "SomeCompany";
+  public const string kVendorName = "erclu";
   // The vendor name - used for the company name in builds and fbx output. Can have spaces.
-  public const string kDisplayVendorName = "Some Company";
+  public const string kDisplayVendorName = "erclu";
   // This is the App name used when speaking to Google services
   public const string kGoogleServicesAppName = kAppDisplayName;
   // The name of the configuration file. You may want to change this if you think your users may
@@ -60,11 +60,11 @@ public class App : MonoBehaviour {
   public const string kConfigFileName = "Tilt Brush.cfg";
   // The name of the App folder (In the user's Documents folder) - you may want to share this with
   // the original Tilt Brush, or not.
-  public const string kAppFolderName = "Tilt Brush";
+  public const string kAppFolderName = "tntb";
   // The data folder used on Google Drive.
   public const string kDriveFolderName = kAppDisplayName;
   // Executable Base
-  public const string kGuiBuildExecutableName = "OpenSourceTiltBrush";
+  public const string kGuiBuildExecutableName = "tntb";
   // Windows Executable
   public const string kGuiBuildWindowsExecutableName = kGuiBuildExecutableName + ".exe";
   // OSX Executable
@@ -82,8 +82,8 @@ public class App : MonoBehaviour {
   private const string kProtocolHandlerPrefix = "tiltbrush://remix/";
   private const string kFileMoveFilename = "WhereHaveMyFilesGone.txt";
 
-  private const string kFileMoveContents = 
-      "All your " + kAppDisplayName + " files have been moved to\n" + 
+  private const string kFileMoveContents =
+      "All your " + kAppDisplayName + " files have been moved to\n" +
       "/sdcard/" + kAppFolderName + ".\n";
 
   public enum AppState {
@@ -1953,7 +1953,7 @@ public class App : MonoBehaviour {
         foreach (ZipLibrary.ZipEntry entry in zip) {
           if (entry.IsFile && entry.Name.StartsWith(supportBeginning)) {
             // Create the directory if needed.
-            string fullPath = Path.Combine(App.SupportPath(), 
+            string fullPath = Path.Combine(App.SupportPath(),
                                            entry.Name.Substring(supportBeginning.Length));
             string directory = Path.GetDirectoryName(fullPath);
             if (!Directory.Exists(directory)) {

@@ -73,3 +73,7 @@
 
 # Google process
 .gitbugtraq
+
+# Oculus packages
+Assets/Oculus
+Assets/Oculus.meta
